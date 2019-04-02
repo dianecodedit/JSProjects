@@ -82,7 +82,7 @@ img {
 }
 .choice:hover {
   cursor:  pointer;
-  background: red;
+  background: #E2584D;
 }
 
 #actionmessage {
