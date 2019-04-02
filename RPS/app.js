@@ -23,12 +23,18 @@ function convertToWord(letter) {
 }
 
 function win(userChoice, computerChoice) {
+  const userChoice_div = document.getElementById(userChoice)
+  userChoice_div.classList.add("greenglow");
+  setTimeout(() => userChoice_div.classList.remove("greenglow"), 300)
   userScore++;
   userScore_span.innerHTML = userScore;
   result_p.innerHTML = `${convertToWord(userChoice)}${smallUserWord} beats ${convertToWord(computerChoice)}${smallCompWord}. You win!`
 }
 
 function lose(userChoice, computerChoice) {
+  const userChoice_div = document.getElementById(userChoice)
+  userChoice_div.classList.add("redglow");
+  setTimeout(() => userChoice_div.classList.remove("redglow"), 300)
   computerScore++;
   computerScore_span.innerHTML = computerScore;
   result_p.innerHTML = `${convertToWord(computerChoice)}${smallCompWord} beats ${convertToWord(userChoice)}${smallUserWord}. You lose!`
@@ -36,6 +42,9 @@ function lose(userChoice, computerChoice) {
 }
 
 function draw(userChoice, computerChoice) {
+  const userChoice_div = document.getElementById(userChoice)
+  userChoice_div.classList.add("greyglow");
+  setTimeout(() => userChoice_div.classList.remove("greyglow"), 300)
   result_p.innerHTML = `${convertToWord(computerChoice)}${smallCompWord} draws with ${convertToWord(userChoice)}${smallUserWord}. It's a draw!!`
 }
 
@@ -62,24 +71,9 @@ function game(userChoice) {
 }
 
 function main() {
-  rock_div.addEventListener("click", function() {
-    game("r")
-  })
-  paper_div.addEventListener("click", function() {
-    game("p")
-  })
-  scissors_div.addEventListener("click", function() {
-    game("s")
-  })
+  rock_div.addEventListener("click", () => game("r"))
+  paper_div.addEventListener("click",() => game("p"))
+  scissors_div.addEventListener("click",() => game("s"))
 }
 
 main();
-//
-// if (comp === userChoice) {
-//   console.log("draw");
-// } else if (comp == 1 && userChoice == 2) {
-//   console.log("User Wins. Paper beats rock")
-// } else if (comp == 1 && userChoice == 3) {
-//   console.log("User Wins. Scissors beats Paper")
-// } else if (comp == 2 && userChoice == 1) {
-//   console.log("User Wins. Scissors beats Paper")
