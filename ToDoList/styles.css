@@ -20,19 +20,18 @@ body {
 }
 
 .stickynote {
-  height:350px;
+  height:400px;
   width:350px;
   border: 1px solid grey;
   background-color: #eeefa7;
-  position:relative;
-  display:inline-block;
-  font-size:1.5rem;
-
+  font-size:1rem;
+  display:inline-grid;
+  margin:30px 30px 0 0;
 }
 
 li {
   list-style: none;
-  padding:5px;
+  padding:15px;
 }
 
 .inputclass {
@@ -45,28 +44,27 @@ li {
 
 #sn1 {
   transform:rotate(25deg);
-  position:relative;
-  top:30px;
-  left:30px;
 }
 
 #sn2 {
   transform:rotate(-30deg);
-  position:relative;
-  top:10px;
-  left:70px;
 }
 
 #sn3 {
   transform:rotate(15deg);
-  position:relative;
-  top:30px;
-  right:15px;
 }
 
 #sn4 {
   transform:rotate(-10deg);
-  position:relative;
-  top:20px;
-  right:-35px;
+}
+
+.listitembutton {
+  background:transparent;
+  border:black solid 2px;
+  height:30px;
+  width:30px;
+  border-radius:50%;
+  margin:3px;
+  font-size:1rem;
+  color:red;
 }
