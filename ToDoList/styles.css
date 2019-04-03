@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css?family=Patrick+Hand');
+
+* {
+  margin:0;
+  padding:0;
+}
+
+body {
+  font-family: 'Patrick Hand', cursive;
+  max-width:900px;
+  margin:0 auto;
+  background-color: #427982;
+}
+
+.bodyheader {
+  text-align: center;
+  text-decoration: underline;
+  font-size:3rem;
+
+}
+
+.stickynote {
+  height:350px;
+  width:350px;
+  border: 1px solid grey;
+  background-color: #eeefa7;
+  position:static;
+  display:inline-block;
+  z-index: -1;
+}
+
+.stickynoteheader {
+  height:60px;
+  background-color: #e5e577;
+  text-align: center;
+
+}
+
+.headertext {
+  font-size:2.5rem;
+}
+
+#sn1 {
+  transform:rotate(25deg);
+  position:relative;
+  top:30px;
+  left:30px;
+}
+
+#sn2 {
+  transform:rotate(-30deg);
+  position:relative;
+  top:10px;
+  left:70px;
+}
+
+#sn3 {
+  transform:rotate(15deg);
+  position:relative;
+  top:30px;
+  right:15px;
+}
+
+#sn4 {
+  transform:rotate(-10deg);
+  position:relative;
+  top:20px;
+  right:-35px;
+}
